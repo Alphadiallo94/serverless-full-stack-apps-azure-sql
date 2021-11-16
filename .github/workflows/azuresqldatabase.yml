@@ -10,7 +10,6 @@ on:
       - main
 
 jobs:
-  
   deploy_database_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: windows-latest
@@ -23,3 +22,8 @@ jobs:
           connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
           # uses dacpac to deploy database schema
           dacpac-package: './Database/dacpac/bus-db.dacpac'
+
+
+          
+
+#https://Alphadiallo94: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@github.com/Alphadiallo94/serverless-full-stack-apps-azure-sql.git
